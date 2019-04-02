@@ -6,7 +6,9 @@
   "license": "MIT",
   "author": "Jack and Amy Steam <jacksteamdev@gmail.com>",
   "files": [
-    "build"
+    "build",
+    "functions.js",
+    "functions-cjs.js"
   ],
   "main": "build/bundle-cjs.js",
   "module": "build/bundle-esm.js",
