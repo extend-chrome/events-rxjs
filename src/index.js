@@ -15,3 +15,5 @@ export const alarms = {
 export const runtime = {
   installs: fromChromeEvent(chrome.runtime.onInstalled),
 }
+
+export { fromChromeEvent }
