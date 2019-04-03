@@ -8,17 +8,17 @@ import { fromChromeEvent } from './functions'
 
 // https://developer.chrome.com/extensions/contextMenus#events
 export const contextMenus = {
-  clicks: fromChromeEvent(chrome.contextMenus.onClicked),
+  clicks: () => fromChromeEvent(chrome.contextMenus.onClicked),
 }
 
 // https://developer.chrome.com/extensions/alarms#events
 export const alarms = {
-  alarms: fromChromeEvent(chrome.alarms.onAlarm),
+  alarms: () => fromChromeEvent(chrome.alarms.onAlarm),
 }
 
 // https://developer.chrome.com/extensions/browserAction#events
 export const browserAction = {
-  clicks: fromChromeEvent(chrome.browserAction.onClicked),
+  clicks: () => fromChromeEvent(chrome.browserAction.onClicked),
 }
 
 // https://developer.chrome.com/extensions/proxy#events
@@ -30,10 +30,15 @@ export const proxy = {
 
 // https://developer.chrome.com/extensions/notifications#events
 export const notifications = {
-  // closes,
-  // clicks,
-  // buttonClicks,
-  // permissionLevelChanges,
+  closes: () => fromChromeEvent(chrome.notifications.onClosed),
+  clicks: () => fromChromeEvent(chrome.notifications.onClicked),
+  buttonClicks: () =>
+    fromChromeEvent(chrome.notifications.onButtonClicked),
+  //Chrome OS only
+  permissionLevelChanges: () =>
+    fromChromeEvent(
+      chrome.notifications.onPermissionLevelChanged,
+    ),
 }
 // DEPRECATED NOTIFICATION EVENTS
 // onShowSettings
@@ -41,7 +46,7 @@ export const notifications = {
 // https://developer.chrome.com/extensions/runtime#events
 export const runtime = {
   // startups,
-  installs: fromChromeEvent(chrome.runtime.onInstalled),
+  installs: () => fromChromeEvent(chrome.runtime.onInstalled),
   // suspends,
   // suspendCancels,
   // updateAvailables,
