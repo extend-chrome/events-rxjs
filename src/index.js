@@ -33,7 +33,10 @@ export const notifications = {
   closes: () => fromChromeEvent(chrome.notifications.onClosed),
   clicks: () => fromChromeEvent(chrome.notifications.onClicked),
   buttonClicks: () =>
-    fromChromeEvent(chrome.notifications.onButtonClicked),
+    fromChromeEvent(
+      chrome.notifications.onButtonClicked,
+      (noteId, buttonIndex) => ({ noteId, buttonIndex }),
+    ),
   //Chrome OS only
   permissionLevelChanges: () =>
     fromChromeEvent(

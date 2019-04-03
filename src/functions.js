@@ -7,7 +7,7 @@ import { fromEventPattern } from 'rxjs'
  *
  * @returns {Observable} RxJS Observable
  */
-export const fromChromeEvent = event =>
+export const fromChromeEvent = (event, selector = x => x) =>
   fromEventPattern(
     handler => {
       event.addListener(handler)
@@ -15,4 +15,5 @@ export const fromChromeEvent = event =>
     handler => {
       event.removeListener(handler)
     },
+    selector,
   )
