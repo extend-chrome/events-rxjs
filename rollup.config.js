@@ -2,6 +2,8 @@
 
 import code from 'rollup-plugin-code-string'
 
+const external = ['rxjs', 'rxjs/operators']
+
 export default [
   {
     input: 'src/index.js',
@@ -17,7 +19,7 @@ export default [
         sourcemap: 'inline',
       },
     ],
-    external: ['rxjs'],
+    external,
     plugins: [code()],
   },
   {
@@ -34,6 +36,6 @@ export default [
         sourcemap: 'inline',
       },
     ],
-    external: ['rxjs'],
+    external,
   },
 ]
