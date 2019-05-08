@@ -1,7 +1,5 @@
 /* eslint-env node */
 
-import code from 'rollup-plugin-code-string'
-
 const external = ['rxjs', 'rxjs/operators']
 
 export default [
@@ -20,7 +18,6 @@ export default [
       },
     ],
     external,
-    plugins: [code()],
   },
   {
     input: 'src/functions.js',

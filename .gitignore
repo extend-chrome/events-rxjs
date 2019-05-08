@@ -1,2 +1,4 @@
 node_modules/
 build/
+functions-cjs.js
+functions.js
