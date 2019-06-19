@@ -7,6 +7,7 @@ import { fromChromeEvent } from './functions'
 export { action, browserAction } from './action'
 export { notifications } from './notifications'
 export { contextMenus } from './contextMenus'
+export { runtime } from './runtime'
 
 /* ---------- single event namespaces --------- */
 
