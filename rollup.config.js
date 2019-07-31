@@ -1,38 +1,23 @@
 /* eslint-env node */
 
-const external = ['rxjs', 'rxjs/operators']
+import typescript from 'rollup-plugin-typescript'
+import { emptyDir } from 'rollup-plugin-empty-dir'
 
 export default [
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: [
       {
-        file: 'build/bundle-esm.js',
+        dir: 'lib',
         format: 'esm',
-        sourcemap: 'inline',
+        sourcemap: true,
       },
       {
-        file: 'build/bundle-cjs.js',
+        dir: 'lib',
         format: 'cjs',
-        sourcemap: 'inline',
+        sourcemap: true,
       },
     ],
-    external,
-  },
-  {
-    input: 'src/functions.js',
-    output: [
-      {
-        file: 'functions.js',
-        format: 'esm',
-        sourcemap: 'inline',
-      },
-      {
-        file: 'functions-cjs.js',
-        format: 'cjs',
-        sourcemap: 'inline',
-      },
-    ],
-    external,
+    plugins: [typescript(), emptyDir()],
   },
 ]

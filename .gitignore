@@ -1,4 +1,4 @@
+.vscode/
+lib/
 node_modules/
-build/
-functions-cjs.js
-functions.js
+tests/e2e/extension-build
