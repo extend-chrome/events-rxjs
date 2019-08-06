@@ -24,7 +24,7 @@
     "publish": "npm publish",
     "push": "git push",
     "start": "run-p build:watch",
-    "test": "run-p test:quick",
+    "test": "jest",
     "test:all": "jest",
     "test:e2e": "jest e2e",
     "test:quick": "jest --testPathIgnorePatterns=e2e",
