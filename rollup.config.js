@@ -1,7 +1,8 @@
 /* eslint-env node */
 
 import typescript from 'rollup-plugin-typescript'
-import { emptyDir } from 'rollup-plugin-empty-dir'
+// TODO: add options.dir to emptyDir
+// import { emptyDir } from 'rollup-plugin-empty-dir'
 
 const { main, module } = require('./package.json')
 
@@ -20,7 +21,10 @@ export default [
         sourcemap: true,
       },
     ],
-    plugins: [typescript(), emptyDir()],
+    plugins: [
+      typescript(),
+      // emptyDir({})
+    ],
     external: ['rxjs', 'rxjs/operators'],
   },
 ]
