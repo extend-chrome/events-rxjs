@@ -3,17 +3,19 @@
 import typescript from 'rollup-plugin-typescript'
 import { emptyDir } from 'rollup-plugin-empty-dir'
 
+const { main, module } = require('./package.json')
+
 export default [
   {
     input: 'src/index.ts',
     output: [
       {
-        dir: 'lib',
+        file: module,
         format: 'esm',
         sourcemap: true,
       },
       {
-        dir: 'lib',
+        file: main,
         format: 'cjs',
         sourcemap: true,
       },
