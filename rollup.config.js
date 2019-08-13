@@ -19,5 +19,6 @@ export default [
       },
     ],
     plugins: [typescript(), emptyDir()],
+    external: ['rxjs', 'rxjs/operators'],
   },
 ]

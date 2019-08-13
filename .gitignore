@@ -3,3 +3,4 @@ lib/
 node_modules/
 tests/e2e/extension-build
 playground
+types
