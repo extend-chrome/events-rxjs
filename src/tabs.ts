@@ -4,25 +4,27 @@ import { fromChromeEvent } from './fromChromeEvent'
 export const tabs = {
   // createStream, // cb :: tab -> void
   get createStream() {
-    return fromChromeEvent<[chrome.tabs.Tab]>(chrome.tabs.onCreated)
+    return fromChromeEvent<[chrome.tabs.Tab]>(
+      chrome.tabs.onCreated,
+    )
   },
   // updateStream, // cb :: (tabId, changeInfo, tab) -> void
   get updateStream() {
-    return fromChromeEvent<[number, chrome.tabs.TabChangeInfo, chrome.tabs.Tab]>(
-      chrome.tabs.onUpdated,
-    )
+    return fromChromeEvent<
+      [number, chrome.tabs.TabChangeInfo, chrome.tabs.Tab]
+    >(chrome.tabs.onUpdated)
   },
   // moveStream, // cb :: (tabId, moveInfo) -> void
   get moveStream() {
-    return fromChromeEvent<[number, chrome.tabs.TabMoveInfo]>(chrome.tabs.onMoved)
-  },
-  // activateStream, // cb :: activeInfo -> void
-  get activateStream() {
-    return fromChromeEvent<[chrome.tabs.TabActiveInfo]>(chrome.tabs.onActiveChanged)
+    return fromChromeEvent<[number, chrome.tabs.TabMoveInfo]>(
+      chrome.tabs.onMoved,
+    )
   },
   // highlightStream, // cb :: highlightInfo -> void
   get highlightStream() {
-    return fromChromeEvent<[chrome.tabs.TabHighlightInfo]>(chrome.tabs.onHighlighted)
+    return fromChromeEvent<[chrome.tabs.TabHighlightInfo]>(
+      chrome.tabs.onHighlighted,
+    )
   },
   // detachStream, // cb :: (tabId, detachInfo) -> void
   get detachStream() {
@@ -44,11 +46,15 @@ export const tabs = {
   },
   // replaceStream, // cb :: (addedTabId, removedTabId) -> void
   get replaceStream() {
-    return fromChromeEvent<[number, number]>(chrome.tabs.onReplaced)
+    return fromChromeEvent<[number, number]>(
+      chrome.tabs.onReplaced,
+    )
   },
   // zoomStream, // cb :: zoomChangeInfo -> void
   get zoomStream() {
-    return fromChromeEvent<[chrome.tabs.ZoomChangeInfo]>(chrome.tabs.onZoomChange)
+    return fromChromeEvent<[chrome.tabs.ZoomChangeInfo]>(
+      chrome.tabs.onZoomChange,
+    )
   },
 }
 // DEPRECATED TAB EVENTS
