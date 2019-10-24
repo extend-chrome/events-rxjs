@@ -14,7 +14,7 @@ export const menus = {
    * https://developer.chrome.com/extensions/contextMenus#event-onClicked
    */
   get clickStream() {
-    return fromChromeEvent<[chrome.contextMenus.OnClickData, chrome.tabs.Tab]>(
+    return fromChromeEvent(
       chrome.contextMenus.onClicked,
     )
   },
