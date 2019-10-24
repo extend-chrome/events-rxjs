@@ -2,6 +2,12 @@ import { fromChromeEvent } from './fromChromeEvent'
 
 // https://developer.chrome.com/extensions/tabs#events
 export const tabs = {
+  // activeStream, // cb :: ({tabId, windowId}) -> void
+  get activationStream() {
+    return fromChromeEvent(
+      chrome.tabs.onActivated,
+    )
+  },
   // createStream, // cb :: tab -> void
   get createStream() {
     return fromChromeEvent<[chrome.tabs.Tab]>(
