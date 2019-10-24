@@ -8,9 +8,9 @@ import { fromEventPattern, Observable } from 'rxjs'
  * @returns {Observable} RxJS Observable
  */
 export function fromChromeEvent<T extends any[]>(
-  event: chrome.events.Event<Function>,
+  event: chrome.events.Event<(...args: T) => void>,
 ): Observable<T> {
-  return fromEventPattern(
+  return fromEventPattern<T>(
     (handler) => {
       event.addListener(handler)
     },
