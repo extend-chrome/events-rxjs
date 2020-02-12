@@ -25,6 +25,7 @@
     "test:quick": "jest --testPathIgnorePatterns=e2e",
     "postversion": "run-s build:pro build:types release"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/chrome": "0.0.91",
     "@types/jest": "^24.0.19",
@@ -51,7 +52,7 @@
     "tslib": "^1.10.0",
     "typescript": "^3.6.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "rxjs": "^6.5.3"
   }
 }
