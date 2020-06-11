@@ -1,5 +1,5 @@
 {
-  "name": "@bumble/chrome-rxjs",
+  "name": "@extend-chrome/events-rxjs",
   "version": "0.10.2-0",
   "description": "RxJS Observables for Chrome API events.",
   "license": "MIT",
