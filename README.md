@@ -34,9 +34,12 @@
 
 ## Getting started <a name = "getting_started"></a>
 
-You will need to use a bundler like [Rollup](https://rollupjs.org/guide/en/), Parcel, or Webpack to include this library in the build of Chrome extension.
+You will need to use a bundler like
+[Rollup](https://rollupjs.org/guide/en/), Parcel, or Webpack to
+include this library in the build of Chrome extension.
 
-See [`rollup-plugin-chrome-extension`](http://bit.ly/35hLMR8) for an easy way use Rollup to build your Chrome extension!
+See [`rollup-plugin-chrome-extension`](http://bit.ly/35hLMR8) for
+an easy way use Rollup to build your Chrome extension!
 
 ### Installation
 
@@ -49,7 +52,7 @@ npm i @extend-chrome/events-rxjs
 ```javascript
 import { contextMenus } from '@extend-chrome/events-rxjs'
 
-contextMenus.clicks.subscribe(clickEvent => {
+contextMenus.clicks.subscribe((clickEvent) => {
   console.log('click', clickEvent)
 })
 ```
