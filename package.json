@@ -18,13 +18,12 @@
     "build:types": "tsc -p tsconfig.d.json",
     "build:watch": "npm run build:dev -- -w",
     "preinstall": "npx only-allow pnpm",
-    "release": "git push && npm publish",
     "start": "run-p build:watch",
     "test": "jest",
     "test:all": "jest",
     "test:e2e": "jest e2e",
     "test:quick": "jest --testPathIgnorePatterns=e2e",
-    "postversion": "run-s build:pro build:types release"
+    "prepublisn": "run-s build:pro build:types"
   },
   "devDependencies": {
     "@types/chrome": "0.0.95",
