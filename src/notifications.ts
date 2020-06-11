@@ -3,16 +3,24 @@ import { fromChromeEvent } from './fromChromeEvent'
 // https://developer.chrome.com/extensions/notifications#events
 export const notifications = {
   get closeStream() {
-    return fromChromeEvent<[string, boolean]>(chrome.notifications.onClosed)
+    return fromChromeEvent<[string, boolean]>(
+      chrome.notifications.onClosed,
+    )
   },
   get clickStream() {
-    return fromChromeEvent<[string]>(chrome.notifications.onClicked)
+    return fromChromeEvent<[string]>(
+      chrome.notifications.onClicked,
+    )
   },
   get buttonClickStream() {
-    return fromChromeEvent<[string, number]>(chrome.notifications.onButtonClicked)
+    return fromChromeEvent<[string, number]>(
+      chrome.notifications.onButtonClicked,
+    )
   },
   get permissionLevelChangeStream() {
-    return fromChromeEvent<[string]>(chrome.notifications.onPermissionLevelChanged)
+    return fromChromeEvent<[string]>(
+      chrome.notifications.onPermissionLevelChanged,
+    )
   },
 }
 

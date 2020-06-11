@@ -17,9 +17,6 @@ export const commands = {
    * https://developer.chrome.com/extensions/commands#event-onCommand
    */
   get commandStream() {
-    return fromChromeEvent<[string]>(
-      chrome.commands.onCommand,
-    )
+    return fromChromeEvent<[string]>(chrome.commands.onCommand)
   },
-
 }
