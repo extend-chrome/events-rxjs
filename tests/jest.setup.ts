@@ -1,14 +1,9 @@
 import * as chrome from 'sinon-chrome'
-;(<any>window).chrome = chrome
 
-var ChromePromise = require('chrome-promise/constructor')
-var chromep = new ChromePromise({ chrome })
-;(<any>window).chromep = chromep
+const ChromePromise = require('chrome-promise/constructor')
+const chromep = new ChromePromise({ chrome })
 
-// Jest's jsdom does not include window.crypto
-var nodeCrypto = require('crypto')
-;(<any>window).crypto = {
-  getRandomValues: function(buffer: Uint8Array) {
-    return nodeCrypto.randomFillSync(buffer)
-  },
-}
+Object.assign(global, {
+  chrome,
+  chromep,
+})

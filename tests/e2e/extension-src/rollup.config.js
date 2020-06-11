@@ -12,7 +12,7 @@ import typescript from 'rollup-plugin-typescript'
 const p = (x) => process.env.PRODUCTION && x
 
 const permissions = {
-  include: ['**/@bumble/**/*', 'src/**/*'],
+  include: ['**/@extend-chrome/**/*', 'src/**/*'],
 }
 
 const plugins = [

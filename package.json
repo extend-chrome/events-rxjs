@@ -1,31 +1,30 @@
 {
-  "name": "@bumble/chrome-rxjs",
+  "name": "@extend-chrome/events-rxjs",
   "version": "0.10.2-0",
   "description": "RxJS Observables for Chrome API events.",
   "license": "MIT",
   "author": "Jack and Amy Steam <jacksteamdev@gmail.com>",
+  "main": "lib/index-cjs.js",
+  "module": "lib/index-esm.js",
+  "types": "types/index.d.ts",
   "files": [
     "lib",
     "types"
   ],
-  "main": "lib/index-cjs.js",
-  "module": "lib/index-esm.js",
-  "types": "types/index.d.ts",
   "scripts": {
     "build": "run-p build:dev",
     "build:dev": "rollup -c --environment NODE_ENV:development",
     "build:pro": "rollup -c --environment NODE_ENV:production",
     "build:types": "tsc -p tsconfig.d.json",
     "build:watch": "npm run build:dev -- -w",
-    "release": "git push && npm publish",
+    "preinstall": "npx only-allow pnpm",
     "start": "run-p build:watch",
     "test": "jest",
     "test:all": "jest",
     "test:e2e": "jest e2e",
     "test:quick": "jest --testPathIgnorePatterns=e2e",
-    "postversion": "run-s build:pro build:types release"
+    "prepublisn": "run-s build:pro build:types"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/chrome": "0.0.95",
     "@types/jest": "^25.1.2",
@@ -33,12 +32,16 @@
     "@types/power-assert": "^1.5.3",
     "@types/puppeteer": "^2.0.0",
     "@types/sinon-chrome": "^2.2.6",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "chrome-promise": "^3.0.5",
     "delay": "^4.3.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-jest": "^23.13.1",
     "jest": "^25.1.0",
     "npm-run-all": "^4.1.5",
     "power-assert": "^1.6.1",
+    "prettier": "^2.0.5",
     "puppeteer": "^2.1.1",
     "rollup": "^1.31.0",
     "rollup-plugin-chrome-extension": "^2.1.0",
@@ -47,11 +50,11 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-zip": "^0.7.0",
+    "rxjs": "^6.5.4",
     "sinon-chrome": "^3.0.1",
     "ts-jest": "^25.2.0",
     "tslib": "^1.10.0",
-    "typescript": "^3.7.5",
-    "rxjs": "^6.5.4"
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
     "rxjs": "^6.5.4"

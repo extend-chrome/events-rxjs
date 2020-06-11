@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import * as tests from './tests.js'
 import chromep from 'chrome-promise'
 

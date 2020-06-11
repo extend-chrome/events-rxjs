@@ -13,7 +13,7 @@ it('should emit value', (done) => {
 
   action.subscribe({
     next: (t) => {
-      expect(t).toBe(tab)
+      expect(t).toStrictEqual([tab])
       done()
     },
   })

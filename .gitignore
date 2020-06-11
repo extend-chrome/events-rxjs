@@ -1,6 +1,6 @@
 .vscode/
 lib/
 node_modules/
-tests/e2e/extension-build
+tests/e2e/extension-dist
 playground
 types
