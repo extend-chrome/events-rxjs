@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="http://bit.ly/2QG8bU4" rel="noopener">
-  <img width=200px height=200px src="https://i.imgur.com/FmuqfEi.png" alt="@extend-chrome/events-rxjs logo"></a>
+  <a href="https://github.com/extend-chrome/events-rxjs" rel="noopener">
+  <img width=200px height=200px src="https://i.imgur.com/shb0zj0.png" alt="@extend-chrome/events-rxjs logo"></a>
 </p>
 
 <h3 align="center">@extend-chrome/events-rxjs</h3>
 
 <div align="center">
 
-[![npm (scoped)](https://img.shields.io/npm/v/@extend-chrome/events-rxjs.svg)](http://bit.ly/2s7rsnl)
-[![GitHub last commit](https://img.shields.io/github/last-commit/extend-chrome/events-rxjs.svg)](http://bit.ly/2QG8bU4)
+[![npm (scoped)](https://img.shields.io/npm/v/@extend-chrome/events-rxjs.svg)](https://www.npmjs.com/package/@extend-chrome/events-rxjs)
+[![GitHub last commit](https://img.shields.io/github/last-commit/extend-chrome/events-rxjs.svg)](https://github.com/extend-chrome/events-rxjs)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![TypeScript Declarations Included](https://img.shields.io/badge/types-TypeScript-informational)](#typescript)
 
@@ -38,7 +38,7 @@ You will need to use a bundler like
 [Rollup](https://rollupjs.org/guide/en/), Parcel, or Webpack to
 include this library in the build of Chrome extension.
 
-See [`rollup-plugin-chrome-extension`](http://bit.ly/35hLMR8) for
+See [`rollup-plugin-chrome-extension`](https://github.com/extend-chrome/rollup-plugin-chrome-extension) for
 an easy way use Rollup to build your Chrome extension!
 
 ### Installation
