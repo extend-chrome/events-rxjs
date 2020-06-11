@@ -52,7 +52,7 @@ npm i @extend-chrome/events-rxjs
 ```javascript
 import { contextMenus } from '@extend-chrome/events-rxjs'
 
-contextMenus.clicks.subscribe((clickEvent) => {
+contextMenus.clickStream.subscribe((clickEvent) => {
   console.log('click', clickEvent)
 })
 ```
