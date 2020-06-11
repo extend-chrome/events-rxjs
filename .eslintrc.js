@@ -43,6 +43,11 @@ const rules = {
 /*                          OVERRIDES                          */
 /* ----------------------------------------------------------- */
 
+const webextensions = {
+  files: ['tests/e2e/extension-src'],
+  env: { webextensions: true },
+}
+
 const jest = {
   files: [
     '**/*.test.ts',
@@ -102,7 +107,7 @@ const ts = {
     ],
   },
   // File matching patterns should go from general to specific
-  overrides: [jest],
+  overrides: [jest, webextensions],
 }
 
 /* ----------------------------------------------------------- */
