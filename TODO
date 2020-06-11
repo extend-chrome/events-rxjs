@@ -1,8 +1,9 @@
 
 Todo:
   ☐ Publish
-  ☐ Document @bumble/chrome-rxjs Usage
-  ☐ Update rollup plugins to @rollup
+  ☐ Document `@extend-chrome/events-rxjs` Usage
+  ☐ Update rollup plugins to `@rollup`
   ☐ Switch all tests to TS
   ☐ Fix tests
-  ☐ Switch to @bumble/jest-chrome
+  ☐ Implement e2e tests
+  ☐ Switch to `jest-chrome`
