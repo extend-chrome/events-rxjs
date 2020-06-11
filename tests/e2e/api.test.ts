@@ -5,7 +5,7 @@
 
 // import * as tests from './extension-src/tests'
 
-// import { buildExtension } from './extension-setup'
+// import { buildExtension } from './buildExtension'
 // const { options } = require('./extension-src/rollup.config')
 
 // let browser: Browser
@@ -14,7 +14,7 @@
 // let backgroundPage: Page
 // let optionsPage: Page
 
-// const pathToExtension = path.join(__dirname, 'extension-build')
+// const pathToExtension = path.join(__dirname, 'extension-dist')
 // options.output.dir = pathToExtension
 
 // beforeAll(async () => {
