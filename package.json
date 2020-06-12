@@ -22,7 +22,7 @@
     "test:all": "jest",
     "test:e2e": "jest e2e",
     "test:quick": "jest --testPathIgnorePatterns=e2e",
-    "prepublisn": "run-s build:pro build:types"
+    "prepublishOnly": "run-s build:pro build:types"
   },
   "devDependencies": {
     "@types/chrome": "0.0.95",
